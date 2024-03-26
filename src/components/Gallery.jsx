@@ -1,3 +1,5 @@
+import beasts from '../assets/beasts.json'
+
 function HornedBeast(title, imageURL, description) {
   return (
     <section>
@@ -8,11 +10,19 @@ function HornedBeast(title, imageURL, description) {
   )
 }
 
+function loadBeasts() {
+  const beastComponents = beasts.map(beast => (
+    <>
+      {HornedBeast(beast.title, beast.image_url, beast.description)}
+    </>
+  ));
+  return beastComponents;
+}
+
 function Gallery() {
   return (
     <main>
-      {HornedBeast('Rhino', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV9oLhq3AB-1LDyZAPLQ7EtNhg04nfkjMxHDupQVTipDJpgUVEcrZZ6cCUiuN0fBHCBh4&usqp=CAU', 'This is a Rhino. Be nice.')}
-      {HornedBeast('Unicorn', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt-aF0EqtsPWd20nHAD7iuxTG3XivpxHhStg&usqp=CAU', 'This is a unicorn. Be nice.')}
+      {loadBeasts()}
     </main>
   )
 }
