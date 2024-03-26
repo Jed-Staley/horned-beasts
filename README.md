@@ -23,9 +23,9 @@ Estimate of time needed to complete: 20min
 
 Start time: 5:31
 
-Finish time: _____
+Finish time: 5:44
 
-Actual time needed to complete: _____
+Actual time needed to complete: 13min
 
 Number and name of feature: ________________________________
 
