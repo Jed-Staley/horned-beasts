@@ -1,22 +1,7 @@
 import { useState } from 'react';
 import beasts from '../assets/beasts.json'
-
-function HornedBeast(title, imageURL, description) {
-  const [favCount, setFavCount] = useState(0);
-
-  const increaseFavs = () => setFavCount(favCount + 1);
-
-  return (
-    <section> 
-      <h2>{title}</h2>
-      <img src={imageURL} alt='Animal Picture' title={title}></img>
-      <p>{description}</p>
-      <button onClick={increaseFavs}>
-        <span role="img" aria-label="Heart">❤️</span> Favorites: {favCount}
-      </button>
-    </section>
-  )
-}
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function loadBeasts() {
   const beastComponents = beasts.map((beast, index) => (
@@ -25,6 +10,23 @@ function loadBeasts() {
     </section>
   ));
   return beastComponents;
+}
+
+function HornedBeast(title, imageURL, description) {
+  const [favCount, setFavCount] = useState(0);
+
+  const increaseFavs = () => setFavCount(favCount + 1);
+
+  return (
+    <Card style={{ width: '18rem', margin: '10px'}}>
+      <Card.Img variant="top" src={imageURL} />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{description}</Card.Text>
+        <Button onClick={increaseFavs} variant="primary">❤️ : {favCount}</Button>
+      </Card.Body>
+    </Card>
+  )
 }
 
 function Gallery() {
