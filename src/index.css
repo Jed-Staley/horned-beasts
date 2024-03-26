@@ -1,0 +1,40 @@
+.card {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(227, 227, 227);
+  align-content: center;
+  margin: 0;
+}
+.main-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mainLOL {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.horned-beast-image {
+  width: 50%;
+  margin: 10px;
+  height: auto;
+  border-radius: 10px;
+}
+.horned-beast {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  text-align: center;
+}
